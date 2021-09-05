@@ -1,0 +1,27 @@
+modLoader = "javafml"
+loaderVersion = "[36,)"
+license = "MIT License"
+
+[[mods]]
+modId = "hlsiege"
+version = "1.16.5-b1.0"
+displayName = "HLSiege"
+credits = "Credits are on mod's page."
+displayURL = "https://github.com/Divine144/HLSiege" # Replace with curseforge link when out
+authors = "Divinity, slit_bodmod"
+description = '''
+Pending Description
+'''
+
+[[dependencies.hlsiege]] #optional
+modId = "forge"
+mandatory = true
+versionRange = "[36,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.hlsiege]]
+modId = "minecraft"
+mandatory = true
+versionRange = "[1.16.5,1.17)"
+ordering = "NONE"
