@@ -1,0 +1,11 @@
+{
+  "required": true,
+  "package": "com.divinity.hlsiege.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "refmap": "hlspells.refmap.json",
+  "mixins": [],
+  "minVersion": "0.8",
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
