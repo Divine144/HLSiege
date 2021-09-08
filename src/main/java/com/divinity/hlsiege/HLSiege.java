@@ -1,9 +1,12 @@
 package com.divinity.hlsiege;
 
+import com.divinity.hlsiege.init.HlSiegeBlocks;
+import com.divinity.hlsiege.init.HlSiegeTileEntity;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.InterModComms;
 import net.minecraftforge.fml.common.Mod;
@@ -26,6 +29,10 @@ public class HLSiege
     public static final String MODID = "hlsiege";
 
     public HLSiege() {
+        final IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+        HlSiegeBlocks.BLOCKS.register(modEventBus);
+        HlSiegeBlocks.ITEMS.register(modEventBus);
+        HlSiegeTileEntity.TILE_ENTITIES.register(modEventBus);
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
     }
